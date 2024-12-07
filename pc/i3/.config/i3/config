@@ -39,10 +39,13 @@ bindsym $alt+F4 kill
 bindsym Ctrl+space exec --no-startup-id rofi -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && exit"'
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec --no-startup-id dmenu_run
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
+
+# revmap caps to control
+exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -64,8 +67,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec pavucontrol
 bindsym $mod+F2 exec google-chrome-stable
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
+#bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F4 exec terminal -e "/home/theblackarrow/layout"
 bindsym $mod+F5 exec "xrandr --output DP-1 --left-of eDP-1 && xrandr --output eDP-1 --off && xrandr --output DP-2 --off"
@@ -143,7 +146,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+m [class="thunderbird"] scratchpad show
 bindsym $mod+s [class="Spotify"] scratchpad show
-bindsym $mod+n [class="Notion"] scratchpad show
+bindsym $mod+n [class="obsidian"] scratchpad show
 bindsym $mod+c [class="Proton Calendar"] scratchpad show
 
 #navigate workspaces next / previous
@@ -214,13 +217,10 @@ for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
@@ -295,7 +295,6 @@ exec_always --no-startup-id xinput --set-prop "DELL07E6:00 06CB:76AF Touchpad" "
 exec_always setxkbmap -layout "us,ua" -variant "intl," ",winkeys" "grp:alt_shift_toggle"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -349,8 +348,6 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar
-    # status_command i3status
 	status_command i3blocks
 	position bottom
 
@@ -448,52 +445,3 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-
-set $i3_resurrect i3-resurrect
-
-# Save workspace mode.
-mode "save" {
-  bindsym 1 exec "$i3_resurrect save -w $ws1 --swallow=class,instance,title"
-  bindsym 2 exec "$i3_resurrect save -w $ws2 --swallow=class,instance,title"
-  bindsym 3 exec "$i3_resurrect save -w $ws3 --swallow=class,instance,title"
-  bindsym 4 exec "$i3_resurrect save -w $ws4 --swallow=class,instance,title"
-  bindsym 5 exec "$i3_resurrect save -w $ws5 --swallow=class,instance,title"
-  bindsym 6 exec "$i3_resurrect save -w $ws6 --swallow=class,instance,title"
-  bindsym 7 exec "$i3_resurrect save -w $ws7 --swallow=class,instance,title"
-  bindsym 8 exec "$i3_resurrect save -w $ws8 --swallow=class,instance,title"
-
-  # Back to normal: Enter, Escape, or s
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym s mode "default"
-  bindsym $mod+s mode "default"
-}
-
-# bindsym $mod+s mode "save"
-
-# Restore workspace mode.
-mode "restore" {
-  bindsym 1 exec "$i3_resurrect restore -w $ws1 --programs-only"
-  bindsym 2 exec "$i3_resurrect restore -w $ws2 --programs-only"
-  bindsym 3 exec "$i3_resurrect restore -w $ws3 --programs-only"
-  bindsym 4 exec "$i3_resurrect restore -w $ws4"
-  bindsym 5 exec "$i3_resurrect restore -w $ws5 --programs-only"
-  bindsym 6 exec "$i3_resurrect restore -w $ws6 --programs-only"
-  bindsym 7 exec "$i3_resurrect restore -w $ws7 --programs-only"
-  bindsym 8 exec "$i3_resurrect restore -w $ws8 --programs-only"
-
-  bindsym $mod+1 exec "$i3_resurrect restore -w $ws1 --layout-only"
-  bindsym $mod+2 exec "$i3_resurrect restore -w $ws2 --layout-only"
-  bindsym $mod+3 exec "$i3_resurrect restore -w $ws3 --layout-only"
-  bindsym $mod+4 exec "$i3_resurrect restore -w $ws4 --layout-only"
-  bindsym $mod+5 exec "$i3_resurrect restore -w $ws5 --layout-only"
-  bindsym $mod+6 exec "$i3_resurrect restore -w $ws6 --layout-only"
-  bindsym $mod+7 exec "$i3_resurrect restore -w $ws7 --layout-only"
-  bindsym $mod+8 exec "$i3_resurrect restore -w $ws8 --layout-only"
-
-  # Back to normal: Enter, Escape, or n
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym n mode "default"
-  bindsym $mod+' mode "default"
-}
