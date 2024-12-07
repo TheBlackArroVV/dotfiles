@@ -1,0 +1,72 @@
+URxvt*scrollBar:     false
+URxvt*scrollBar_right:   false
+
+URxvt*transparent:   false
+
+URxvt*title: urxvt
+URxvt*termName: rxvt-unicode-256color
+URxvt.letterSpace: 1
+
+URxvt.font: xft:JetBrainsMono:size=10,style=Regular
+
+dzen2.font:       xft:JetBrainsMono:size=10
+dzen2.foreground: #22EE11
+dzen2.background: black
+
+*antialias:  true
+*autohint:  true
+
+rofi.location:          0
+rofi.color-enabled:     true
+!                       'background', 'border'
+rofi.color-window:      argb:ff997733, argb:ff997733, argb:fff4d68c
+
+! State:                'bg',          'fg',   'bgalt',       'hlbg',        'hlfg'
+rofi.color-normal:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:fff4d68c
+rofi.color-urgent:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:fff4d68c
+rofi.color-active:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:fff4d68c
+rofi.separator-style:   solid
+rofi.fullscreen:        true
+rofi.padding:           130
+rofi.hide-scrollbar:    true
+rofi.line-margin:       5
+rofi.fake-transparency: true
+rofi.yoffset:           0
+rofi.xoffset:           0
+rofi.width:             1366
+rofi.opacity:           90
+rofi.font:              Fira Mono 12
+
+Xft.autohint: 1
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+Xft.dpi: 160
+
+*foreground:	#ecf0f1
+*background:	#141516
+*cursorColor:	#ecf0f1
+*color0:	#3e464e
+*color8:	#3e464e
+*color1:	#db0a5b
+*color9:	#db0a5b
+*color2:	#3fc380
+*color10:	#3fc380
+*color3:	#f2784b
+*color11:	#f2784b
+*color4:	#22a7f0
+*color12:	#22a7f0
+*color5:	#f64747
+*color13:	#f64747
+*color6:	#55aeae
+*color14:	#55aeae
+*color7:	#ecf0f1
+*color15:	#ecf0f1
+
+URxvt.keysym.Control-V: eval:paste_clipboard
+URxvt.keysym.Control-C: eval:selection_to_clipboard
+
+URxvt.transparent:   true
+URxvt.shading:       20
