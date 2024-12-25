@@ -34,6 +34,7 @@ bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $alt+F4 kill
+bindsym Ctrl+Q kill
 
 # rofi
 bindsym Ctrl+space exec --no-startup-id rofi -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && exit"'
