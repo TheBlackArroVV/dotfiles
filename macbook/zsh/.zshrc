@@ -71,7 +71,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent asdf zsh-direnv)
+plugins=(git ssh-agent asdf dotenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,3 +117,4 @@ alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -
 alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && cd -"
 export EDITOR='nvim'
 
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
