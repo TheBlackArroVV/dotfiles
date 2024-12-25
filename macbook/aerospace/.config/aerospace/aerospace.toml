@@ -41,6 +41,7 @@ alt-shift-semicolon = 'move right'
 # Consider using 'join-with' command as a 'split' replacement if you want to enable normalizations
 alt-h = 'split horizontal'
 alt-v = 'split vertical'
+alt-q = 'split opposite'
 
 alt-f = 'fullscreen'
 
@@ -78,7 +79,7 @@ alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 
 alt-shift-minus = 'move-node-to-workspace 8'
 
-alt-shift-c = 'reload-config'
+alt-shift-r = 'reload-config'
 
 alt-r = 'mode resize'
 
