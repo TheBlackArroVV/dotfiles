@@ -103,16 +103,8 @@ source $ZSH/oh-my-zsh.sh
 export HOST_DOCKER_INTERNAL=172.17.0.1
 alias wip="git add . && git commit -m 'Save commit' --no-verify"
 alias fixes="git add . && git commit -m 'Fixes'"
-getlogin () {
-  lpass show $1 | grep -oP "(?<=Username: ).*" | xclip -selection clipboard
-}
-getpassword () {
-  lpass show $1 | grep -oP "(?<=Password: ).*" | xclip -selection clipboard
-}
 alias be="bundle exec"
-alias explain="gh copilot explain"
 alias changed="git diff --name-only"
-alias window_name="xprop | grep WM_CLASS | awk '{ print $4 }'"
 alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -m 'obsidian update: `date`'  && git push origin HEAD && cd -"
 alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && cd -"
 export EDITOR='nvim'
