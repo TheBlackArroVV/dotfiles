@@ -1,0 +1,4 @@
+font-family = Jetbrains Mono
+font-size = 14 
+macos-titlebar-style = hidden
+background-opacity = 0.95
