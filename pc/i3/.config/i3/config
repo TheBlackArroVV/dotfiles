@@ -29,7 +29,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec ghostty
 # bindsym $mod+Return exec kitty
 
 # kill focused window
@@ -69,7 +69,7 @@ bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec pavucontrol
 bindsym $mod+F2 exec google-chrome-stable
 #bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F3 exec alacritty -e ranger
+bindsym $mod+F3 exec ghostty -e ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F4 exec terminal -e "/home/theblackarrow/layout"
 bindsym $mod+F5 exec "xrandr --output DP-1 --left-of eDP-1 && xrandr --output eDP-1 --off && xrandr --output DP-2 --off"
