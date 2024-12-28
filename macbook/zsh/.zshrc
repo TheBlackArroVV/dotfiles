@@ -105,7 +105,7 @@ alias wip="git add . && git commit -m 'Save commit' --no-verify"
 alias fixes="git add . && git commit -m 'Fixes'"
 alias be="bundle exec"
 alias changed="git diff --name-only"
-alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -m 'obsidian update: `date`'  && git push origin HEAD && cd -"
+alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -m 'obsidian update: `date`@`uname -n`'  && git push origin HEAD && cd -"
 alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && cd -"
 export EDITOR='nvim'
 
