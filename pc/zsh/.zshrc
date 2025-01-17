@@ -109,4 +109,4 @@ alias window_name="xprop | grep WM_CLASS | awk '{ print $4 }'"
 alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -m 'obsidian update: `date`@`uname -n`'  && git push origin HEAD && cd -"
 alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && cd -"
 export EDITOR='nvim'
-
+alias rustlings="$HOME/.asdf/installs/rust/1.83.0/bin/rustlings"
