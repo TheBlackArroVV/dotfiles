@@ -1,0 +1,8 @@
+theme = "term16_dark" 
+
+[keys.normal]
+C-d=":bc"
+C-S-d=":bco"
+
+[editor]
+line-number = "relative"
