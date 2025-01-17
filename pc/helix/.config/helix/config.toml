@@ -3,6 +3,11 @@ theme = "term16_dark"
 [keys.normal]
 C-d=":bc"
 C-S-d=":bco"
+C-S-minus="collapse_selection"
+C-s = ":write"
 
 [editor]
 line-number = "relative"
+
+[editor.lsp]
+display-messages = true

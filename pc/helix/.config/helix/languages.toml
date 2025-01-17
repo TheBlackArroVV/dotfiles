@@ -11,6 +11,10 @@ inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.typeHints.hideClosureInitialization = false
 
+[language-server.solargraph]
+config.diagnostics=true
+config.formatting=true
+
 [[language]]
 name = "rust"
 scope = "source.rust"
@@ -78,6 +82,8 @@ shebangs = ["ruby"]
 comment-token = "#"
 language-servers = [ "solargraph" ]
 indent = { tab-width = 2, unit = "  " }
+formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal"] }
+auto-format = true
 
 [[grammar]]
 name = "ruby"
