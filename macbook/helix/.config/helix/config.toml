@@ -5,6 +5,11 @@ Cmd-d=":bc"
 Cmd-S-d=":bco"
 Cmd-S-minus="collapse_selection"
 Cmd-s=":write"
+Cmd-v=":vsplit"
+"S-ret"=":vsplit"
+
+[keys.normal.C-w]
+"S-ret"=":vsplit"
 
 [keys.normal.space]
 f = "file_picker_in_current_directory"
