@@ -107,6 +107,7 @@ alias be="bundle exec"
 alias changed="git diff --name-only"
 alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -m 'obsidian update: `date`@`uname -n`'  && git push origin HEAD && cd -"
 alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && cd -"
-export EDITOR='nvim'
+export EDITOR='hx'
+alias helix="hx"
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"

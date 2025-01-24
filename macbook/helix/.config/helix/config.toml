@@ -1,10 +1,10 @@
 theme = "term16_dark" 
 
 [keys.normal]
-C-d=":bc"
-C-S-d=":bco"
-C-S-minus="collapse_selection"
-C-s=":write"
+Cmd-d=":bc"
+Cmd-S-d=":bco"
+Cmd-S-minus="collapse_selection"
+Cmd-s=":write"
 
 [editor]
 line-number = "relative"
@@ -12,3 +12,6 @@ line-number = "relative"
 [editor.lsp]
 display-messages = true
 display-inlay-hints = true
+
+[editor.cursor-shape] 
+insert = "bar"
