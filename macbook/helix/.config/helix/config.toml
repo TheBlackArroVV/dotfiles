@@ -6,6 +6,10 @@ Cmd-S-d=":bco"
 Cmd-S-minus="collapse_selection"
 Cmd-s=":write"
 
+[keys.normal.space]
+f = "file_picker_in_current_directory"
+F = "file_picker"
+
 [editor]
 line-number = "relative"
 
