@@ -111,3 +111,8 @@ alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && c
 export EDITOR='helix'
 alias rustlings="$HOME/.asdf/installs/rust/1.83.0/bin/rustlings"
 alias yarr="$HOME/.asdf/installs/rust/1.83.0/bin/yarr"
+alias notes="helix Documents/Obsidian\ Vault"
+
+cheatsheet () {
+  curl cht.sh/"$1"
+}
