@@ -109,5 +109,7 @@ alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -
 alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && cd -"
 export EDITOR='hx'
 alias helix="hx"
+alias pr_diff='git diff main...$(git rev-parse --abbrev-ref HEAD)'
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"

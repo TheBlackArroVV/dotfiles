@@ -7,6 +7,7 @@ Cmd-S-minus="collapse_selection"
 Cmd-s=":write"
 Cmd-v=":vsplit"
 "S-ret"=":vsplit"
+Cmd-w = "expand_selection"
 
 [keys.normal.C-w]
 "S-ret"=":vsplit"
@@ -24,3 +25,19 @@ display-inlay-hints = true
 
 [editor.cursor-shape] 
 insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true

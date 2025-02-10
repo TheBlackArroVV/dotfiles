@@ -24,6 +24,7 @@ start-at-login = true
 # Bunch of my hotkeys
 alt-enter = 'exec-and-forget open -n /Applications/ghostty.app'
 alt-f2 = 'exec-and-forget open -n /Applications/Google\ Chrome.app'
+alt-b = 'exec-and-forget open -n /Applications/Google\ Chrome.app'
 alt-n = 'exec-and-forget $HOME/.config/aerospace/scratchpad.sh md.obsidian Obsidian'
 alt-s = 'exec-and-forget $HOME/.config/aerospace/scratchpad.sh com.spotify.client Spotify'
 
@@ -45,7 +46,7 @@ alt-q = 'split opposite'
 
 alt-f = 'fullscreen'
 
-# alt-s = 'layout v_accordion' # 'layout stacking' in i3
+# alt-w = 'layout v_accordion' # 'layout stacking' in i3
 alt-w = 'layout h_accordion'               # 'layout tabbed' in i3
 alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
 
