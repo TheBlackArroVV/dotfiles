@@ -71,7 +71,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent asdf zsh-direnv zsh-autosuggestions)
+plugins=(git ssh-agent asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,12 +109,14 @@ getlogin () {
 getpassword () {
   lpass show $1 | grep -oP "(?<=Password: ).*" | xclip -selection clipboard
 }
+
+commit_with_timestamp () {
+  git add . && git commit -m "`date`: `$1`"
+}
 alias be="bundle exec"
 alias explain="gh copilot explain"
 alias changed="git diff --name-only"
 alias window_name="xprop | grep WM_CLASS | awk '{ print $4 }'"
-alias push_obsidian="cd ~/Documents/Obsidian\ Vault && git add . && git commit -m 'obsidian update: `date`'  && git push origin HEAD && cd -"
-alias pull_obsidian="cd ~/Documents/Obsidian\ Vault && git pull origin HEAD && cd -"
 export EDITOR='helix'
 export ASDF_DATA_DIR="/home/theblackarrow/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
