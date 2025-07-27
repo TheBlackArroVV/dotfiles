@@ -33,7 +33,7 @@ bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $alt+F4 kill
-bindsym Ctrl+Q kill
+# bindsym Ctrl+Q kill
 
 # rofi
 bindsym Ctrl+space exec --no-startup-id rofi -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && exit"'
@@ -45,7 +45,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+z exec --no-startup-id morc_menu
 
 # revmap caps to control
-exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
+# exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -74,7 +74,7 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F4 exec terminal -e "/home/theblackarrow/layout"
 bindsym $mod+F5 exec "xrandr --output DP-1 --left-of eDP-1 && xrandr --output eDP-1 --off && xrandr --output DP-2 --off"
 # bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
+# bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
@@ -82,6 +82,7 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+t exec alacritty -e sh -c "helix ~/Documents/obsidian_vault"
 
 focus_follows_mouse yes
 
