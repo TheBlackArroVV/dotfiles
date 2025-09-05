@@ -80,3 +80,15 @@ auto-format = true
 [[grammar]]
 name = "ruby"
 source = { git = "https://github.com/tree-sitter/tree-sitter-ruby", rev = "206c7077164372c596ffa8eaadb9435c28941364" }
+
+[[language]]
+name = "markdown"
+language-servers = ["ltex"]
+soft-wrap.enable = true
+
+[language-server.ltex]
+command = "env"
+args = [
+  "JAVA_TOOL_OPTIONS=-Djdk.xml.totalEntitySizeLimit=0",
+  "ltex-ls"
+]
