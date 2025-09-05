@@ -113,6 +113,8 @@ export EDITOR='helix'
 alias rustlings="$HOME/.asdf/installs/rust/1.83.0/bin/rustlings"
 alias yarr="$HOME/.asdf/installs/rust/1.83.0/bin/yarr"
 alias notes="helix Documents/Obsidian\ Vault"
+export FLYCTL_INSTALL="/home/theblackarrow/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 cheatsheet () {
   curl cht.sh/"$1"
