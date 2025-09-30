@@ -2,6 +2,7 @@ theme = "term16_dark"
 
 [keys.normal]
 Cmd-d=":bc"
+D=":bc"
 Cmd-S-d=":bco"
 Cmd-S-minus="collapse_selection"
 Cmd-s=":write"
