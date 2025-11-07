@@ -37,3 +37,6 @@ hidden = false
 [editor.auto-save]
 focus-lost = true
 after-delay.enable = true
+
+[editor.statusline]
+center = ["primary-selection-length"]
