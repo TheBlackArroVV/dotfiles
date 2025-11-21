@@ -5,8 +5,6 @@
 """"""""""""""""""""""""""""""""
 
 " List all keys for completeness, but only disable keys that are not remapped by helix.vim
-:set relativenumber
-:set number
 " Move cursor left
 "noremap a <nop>
 " Move to the beginning of previous word
@@ -1459,6 +1457,8 @@ set incsearch                     " show search results while typing
 set wrapscan                      " searches wrap around the end of the file
 
 set ideajoin
+nmap = <Action>(ReformatCode)
+xmap = <Action>(ReformatCode)
 set idearefactormode=keep
 
 xnoremap \= <Action>(ReformatCode)
@@ -1470,6 +1470,14 @@ xnoremap X <nop>
 set argtextobj
 nmap maa vaa
 xmap maa vaa
+
+set surround
+unmap cs
+unmap ds
+unmap ys
+unmap yss
+nmap mr <Plug>CSurround
+nmap md <Plug>DSurround
 
 " Goto mode
 nmap gr <Action>(FindUsages)
@@ -1591,8 +1599,6 @@ nmap <Space>wt <Action>(ChangeSplitOrientation)
 xmap <Space>wt <Action>(ChangeSplitOrientation)
 nmap <Space>wq <Action>(CloseEditor)
 xmap <Space>wq <Action>(CloseEditor)
-nmap D <Action>(CloseEditor)
-xmap D <Action>(CloseEditor)
 
 nmap <C-w>w <Action>(NextSplitter)
 xmap <C-w>w <Action>(NextSplitter)
@@ -1614,3 +1620,9 @@ nmap <Space>wj <Action>(TabShiftActions.MoveFocusDown)
 xmap <Space>wj <Action>(TabShiftActions.MoveFocusDown)
 nmap <Space>wl <Action>(TabShiftActions.MoveFocusRight)
 xmap <Space>wl <Action>(TabShiftActions.MoveFocusRight)
+
+" My custom binds
+nmap D <Action>(CloseEditor)
+xmap D <Action>(CloseEditor)
+:set relativenumber
+:set number
