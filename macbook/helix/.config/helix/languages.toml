@@ -79,7 +79,7 @@ auto-format = true
 
 [[grammar]]
 name = "ruby"
-source = { git = "https://github.com/tree-sitter/tree-sitter-ruby", rev = "206c7077164372c596ffa8eaadb9435c28941364" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-ruby" }
 
 [[language]]
 name = "markdown"
