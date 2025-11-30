@@ -72,14 +72,14 @@ file-types = [
 ]
 shebangs = ["ruby"]
 comment-token = "#"
-language-servers = [ "solargraph" ]
+language-servers = ["ruby-lsp"]
 indent = { tab-width = 2, unit = "  " }
 formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal"] }
 auto-format = true
 
 [[grammar]]
 name = "ruby"
-source = { git = "https://github.com/tree-sitter/tree-sitter-ruby", rev = "206c7077164372c596ffa8eaadb9435c28941364" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-ruby" }
 
 [[language]]
 name = "markdown"
