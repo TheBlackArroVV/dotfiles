@@ -101,15 +101,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export HOST_DOCKER_INTERNAL=172.17.0.1
+export EDITOR='hx'
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 alias wip="git add . && git commit -m 'Save commit' --no-verify"
 alias fixes="git add . && git commit -m 'Fixes'"
 alias be="bundle exec"
 alias changed="git diff --name-only"
 alias push_obsidian="cd ~/Documents/obsidian_vault && git add . && git commit -m 'obsidian update: `date`@`uname -n`'  && git push origin HEAD && cd -"
 alias pull_obsidian="cd ~/Documents/obsidian_vault && git pull origin HEAD && cd -"
-export EDITOR='hx'
 alias helix="hx"
 alias pr_diff='git diff main...$(git rev-parse --abbrev-ref HEAD)'
 
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+alias vse="~/vse"
