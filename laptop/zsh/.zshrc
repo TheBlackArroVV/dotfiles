@@ -117,6 +117,7 @@ alias be="bundle exec"
 alias explain="gh copilot explain"
 alias changed="git diff --name-only"
 alias window_name="xprop | grep WM_CLASS | awk '{ print $4 }'"
+alias redbull="xset s off; xset s noblank; xset -dpms"
 export EDITOR='helix'
 export ASDF_DATA_DIR="/home/theblackarrow/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
